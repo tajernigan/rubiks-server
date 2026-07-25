@@ -23,8 +23,6 @@ FetchContent_Declare(
 
 FetchContent_MakeAvailable(httplib)
 
-add_executable(hellocmake main.cpp)
-
 add_executable(server server.cpp)
 
 target_link_libraries(

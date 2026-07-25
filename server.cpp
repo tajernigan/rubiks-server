@@ -11,8 +11,12 @@ int main() {
 
             std::cout << "Received: " << request.body << std::endl;
 
+            std::string scramble = request.body;
+            
+            std::string message = "Recieved scramble: " + scramble;
+
             response.set_content(
-                "hello from c++",
+                message,
                 "text/plain"
             );
         }
