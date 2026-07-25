@@ -1,4 +1,4 @@
-#include "httplib.h"
+#include <httplib.h>
 
 #include <iostream>
 
@@ -9,7 +9,7 @@ int main() {
         [](const httplib::Request& request,
            httplib::Response& response) {
 
-            std::cout << "Received: " << request.body << '\n';
+            std::cout << "Received: " << request.body << std::endl;
 
             response.set_content(
                 "hello from c++",
@@ -18,7 +18,7 @@ int main() {
         }
     );
 
-    std::cout << "C++ server listening on port 8081\n";
+    std::cout << "C++ server listening on port 8081" << std::endl;
 
     server.listen("0.0.0.0", 8081);
 }
